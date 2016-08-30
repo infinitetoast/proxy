@@ -1,1 +1,1 @@
-# backScratch-proxy
+# proxy
