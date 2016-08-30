@@ -1,0 +1,26 @@
+{
+  "name": "proxy",
+  "version": "1.0.0",
+  "description": "proxy service",
+  "main": "proxy.js",
+  "scripts": {
+    "start": "node proxy.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node -r dotenv/config proxy.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NealTaylor715/proxy.git"
+  },
+  "author": "infinitetoast",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NealTaylor715/proxy/issues"
+  },
+  "homepage": "https://github.com/NealTaylor715/proxy#readme",
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "express": "^4.14.0",
+    "express-http-proxy": "^0.10.0"
+  }
+}
