@@ -5,4 +5,4 @@ COPY package.json /usr/src/proxy
 RUN npm install
 COPY . /usr/src/proxy
 EXPOSE 6765
-CMD [ "npm", "start:env" ]
+CMD [ "npm", "start" ]
