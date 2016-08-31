@@ -5,6 +5,7 @@
   "main": "proxy.js",
   "scripts": {
     "start": "node proxy.js",
+    "start:env" : "node -r dotenv/config proxy.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node -r dotenv/config proxy.js"
   },
