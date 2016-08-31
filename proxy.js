@@ -13,7 +13,6 @@ app.use('/api/v1/auth', proxy(process.env.AUTH_URL, {
 app.listen(port, function() {
   console.log(`Proxy running on port ${port}`);
 });
-
 // successful return from auth
 app.use('/api/v1/success', function(req, res) {
   // send to task service
@@ -24,3 +23,4 @@ app.use('/login', function(req, res) {
   // you failed
   res.send('LOGIN FAILED!');
 });
+
