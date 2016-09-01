@@ -4,19 +4,16 @@ var url     = require('url');
 
 var port = process.env.PORT || 4532;
 
-app.use('/api/v1/auth', proxy(process.env.AUTH_URL, {
+app.use('/connect/google', proxy(process.env.AUTH_URL, {
   forwardPath: function(req, res) {
     return '/connect/google';
   }
 }));
 
-app.listen(port, function() {
-  console.log(`Proxy running on port ${port}`);
-});
 // successful return from auth
-app.use('/api/v1/success', function(req, res) {
+app.use('/success', function(req, res) {
   // send to task service
-  res.send('SUCCESS!');
+  res.redirect(process.env.TASK_SERVER);
 });
 
 app.use('/login', function(req, res) {
@@ -24,3 +21,6 @@ app.use('/login', function(req, res) {
   res.send('LOGIN FAILED!');
 });
 
+app.listen(port, function() {
+  console.log(`Proxy running on port ${port}`);
+});
