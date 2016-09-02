@@ -2,7 +2,7 @@ var app     = require('express')();
 var proxy   = require('express-http-proxy');
 var url     = require('url');
 
-var port = process.env.PORT || 4532;
+var PORT = process.env.PORT || 4532;
 
 app.use('/connect/google', proxy(process.env.AUTH_URL, {
   forwardPath: function(req, res) {
@@ -21,6 +21,6 @@ app.use('/login', function(req, res) {
   res.send('LOGIN FAILED!');
 });
 
-app.listen(port, function() {
-  console.log(`Proxy running on port ${port}`);
+app.listen(PORT, function() {
+  console.log('Proxying on PORT:', PORT);
 });
