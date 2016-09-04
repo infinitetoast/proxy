@@ -13,7 +13,7 @@ app.use('/connect/google', proxy(process.env.AUTH_URL, {
 // successful return from auth
 app.use('/success', function(req, res) {
   // send to task service
-  res.redirect(process.env.TASK_SERVER);
+  res.redirect(process.env.TASK_URL);
 });
 
 app.use('/login', function(req, res) {
